@@ -1,4 +1,4 @@
-# Modeled a Virtual Data Infrastructure
+# Modeling a Virtual Data Infrastructure
 
 ## Raw Data
 - **What data can be loaded?**
