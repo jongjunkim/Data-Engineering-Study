@@ -58,5 +58,7 @@ WHERE channel in
 * Ordering by multiple columns
 
 * ### JOIN
-![6 types JOIN] (https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/SQL-JOINS-Example-0.jpg)
+![6 types JOIN](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/SQL-JOINS-Example-0.jpg)
+
+
 
