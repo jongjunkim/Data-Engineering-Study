@@ -58,5 +58,5 @@ WHERE channel in
 * Ordering by multiple columns
 
 * ### JOIN
-[6 types JOIN] (https://theartofpostgresql.com/img/SQL-JOINS-Example-0.png)
+![6 types JOIN] (https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/SQL-JOINS-Example-0.jpg)
 
