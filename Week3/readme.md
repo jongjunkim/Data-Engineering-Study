@@ -91,3 +91,7 @@ default_args = {
   * Provides efficiency benefits, especially for large datasets, but can become harder to manage as the complexity increases.
   
 * Execute Airflow based on Docker
+ ![Docker](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/Docker.PNG)
+* docker-compose up in cmd
+ ![Airflow](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/Airflow.PNG)
+![Airflow.UI](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/Airflow_UI.PNG)
