@@ -71,4 +71,6 @@ print_goodbye = PythonOperator(
 #Assign the order of the tasks in our DAG
 print_hello >> print_goodbye
 ```
-
+* ## Airflow run
+![airflow](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/Airflow%20run.PNG)
+![airflow_DAG](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/running%20dag.PNG)
