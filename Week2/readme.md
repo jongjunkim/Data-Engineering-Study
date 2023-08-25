@@ -61,4 +61,8 @@ WHERE channel in
 ![6 types JOIN](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/SQL-JOINS-Example-0.jpg)
 
 
+Reference
 
+https://programmers.co.kr/learn/courses/17123
+
+https://western-sky.tistory.com/144
