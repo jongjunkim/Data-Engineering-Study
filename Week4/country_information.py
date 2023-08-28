@@ -84,7 +84,7 @@ def load(schema, table, records):
 with DAG(
     dag_id='country_information',
     start_date=datetime(2023, 1, 1),  
-    schedule='30 6 * * 6',  
+    schedule='30 6 * * 6',  #0 - Sunday,,, 6 - Saturday Execute DAG 6:30 on every Sat
     max_active_runs=1,
     catchup=False,
     tags = ['API'],
