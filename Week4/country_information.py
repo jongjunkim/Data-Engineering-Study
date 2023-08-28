@@ -57,7 +57,7 @@ def load(schema, table, records):
         _create_table(cur, schema, table, False)
         cur.execute(f"CREATE TEMP TABLE t AS SELECT * FROM {schema}.{table};")
 
-        #DELTE FROM을 먼저 수행 -> FULL REFRESH하는 형태
+        #Full Refresh everytime we bring data
         for r in records:
           country_names = ', '.join(r[0])
           country_names = country_names.replace("'", "''")
