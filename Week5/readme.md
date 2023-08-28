@@ -123,3 +123,7 @@ with DAG(
 * `catchup`: A parameter that determines how to handle periods when the DAG is activated (turned on) after its `start_date`. If set to True (default), the DAG will attempt to catch up on missed runs. If set to False, the DAG will ignore runs that occurred before activation.
 
 * `end_date`: This value is generally not required and is only necessary when performing backfilling for a specific date range. The `airflow dags backfill -s … -e 
+
+
+* Reference:
+ * https://school.programmers.co.kr/app/courses/17123/curriculum
