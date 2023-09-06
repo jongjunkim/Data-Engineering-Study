@@ -89,3 +89,8 @@ trigger_B = TriggerDagRunOperator(
   taskI_id = "trigger_B"
   trigger_dag_id = "DAG name to be triggered"
 ```
+
+## Spark
+
+* the next-generation big data technology following Hadoop.
+* offers a wide range of features related to big data processing.
