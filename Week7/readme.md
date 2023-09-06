@@ -94,3 +94,47 @@ trigger_B = TriggerDagRunOperator(
 
 * the next-generation big data technology following Hadoop.
 * offers a wide range of features related to big data processing.
+* Components of Spark 3.0
+![spark](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/Spark.PNG)
+
+* ## Spark vs MapReduce
+1. Memory vs. Disk:
+   - Spark is fundamentally memory-based for data processing. It can resort to disk usage when memory becomes scarce.
+   - MapReduce primarily relies on disk-based processing.
+
+2. Supported Environments:
+   - MapReduce operates exclusively on top of Hadoop (YARN).
+   - Spark not only supports Hadoop (YARN) but also other distributed computing environments such as Kubernetes (K8s) and Apache Mesos.
+
+3. Data Structures:
+   - MapReduce primarily supports key-value-based data structures.
+   - Spark supports data structures that are conceptually similar to Pandas DataFrames and can handle various data formats.
+
+4. Supported Computing Types:
+   - Spark supports various computing types, including batch data processing, stream data processing, SQL, machine learning, and graph analysis.
+  
+
+Certainly, here's a summary of the information about Spark's programming APIs:
+
+**Spark Programming APIs**
+
+- **RDD (Resilient Distributed Dataset)**
+  - A low-level programming API that allows for fine-grained control over data.
+  - However, it can lead to increased coding complexity.
+
+- **DataFrame & Dataset (Similar to Pandas DataFrames)**
+  - High-level programming APIs that are becoming increasingly popular.
+  - Typically used for structured data manipulation.
+  - When are DataFrame/Dataset necessary?
+    - When performing ML feature engineering or using Spark ML.
+    - When tasks cannot be accomplished with SQL alone.
+
+**Spark SQL**
+- **Spark SQL** processes structured data using SQL.
+- It allows processing DataFrames with SQL, treating them like tables.
+- Similar functionality is available in Pandas.
+- It offers performance up to 100 times faster than Hive queries.
+- In reality, it's not entirely true. Hive has also evolved to use memory in processing.
+  - Hive: Disk -> Memory
+  - Spark: Memory -> Disk
+  - Presto: Memory -> Disk
