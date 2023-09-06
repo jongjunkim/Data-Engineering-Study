@@ -138,3 +138,31 @@ Certainly, here's a summary of the information about Spark's programming APIs:
   - Hive: Disk -> Memory
   - Spark: Memory -> Disk
   - Presto: Memory -> Disk
+ 
+ 
+ ![spark](https://github.com/jongjunkim/Data-Engineering-Study/blob/main/img/spark-datalake.PNG)
+
+
+* ## To enable data parallel processing, you need the following:
+
+**Data Distribution:**
+- Data must be distributed first.
+- In Hadoop, the data processing unit is a data block on disk, typically 128MB in size, determined by the `dfs.block.size` property in the `hdfs-site.xml` configuration.
+- In Spark, these data blocks are called "partitions," and the default partition size is also 128MB.
+- The property `spark.sql.files.maxPartitionBytes` controls the partition size when reading files from HDFS or similar storage systems.
+
+**Concurrent Processing:**
+- Once the data is divided, each partition is processed concurrently.
+- In MapReduce, when dealing with a file composed of N data blocks, N Map tasks are executed in parallel to process them.
+- In Spark, data is loaded into memory in partition-sized chunks, and Executors are assigned to handle each partition.
+
+Shuffling in data processing refers to the need to move data between partitions. Shuffling can occur in the following scenarios:
+
+1. **Explicit Partitioning:** When you explicitly create new partitions, such as reducing the number of partitions.
+
+2. **System-Driven Shuffling:** Shuffling can be triggered by system operations like grouping, aggregation, or sorting.
+   - For example, during aggregation, data may need to be reshuffled to group by a specific key.
+
+When shuffling occurs, data is moved over the network, which can impact performance. The number of partitions generated during shuffling can be determined by the `spark.sql.shuffle.partitions` configuration setting, which defaults to 200, representing the maximum number of partitions. However, the actual number of partitions can vary based on the operation being performed, such as random, hashing partitioning, or range partitioning. For example, sorting typically uses range partitioning.
+
+Additionally, shuffling can lead to data skew, where some partitions have significantly more data than others, causing potential performance issues.
